@@ -9,7 +9,9 @@ namespace OneClass_TwoInterfacesIntoAnotherClass
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {//We cannot create object for interface but we can create a reference variable for interface.
+         //Syntax:Interfacename refrenceVariablename=new Childclassname()
+         //FirstWay of accessing Nokia1100 vlass methods 
             INokia1 objinokia1 = new Nokia1100();
             objinokia1.calling();
             objinokia1.receiving();
@@ -48,6 +50,17 @@ namespace OneClass_TwoInterfacesIntoAnotherClass
             nokiaAshaObj.Bluetooth();
             nokiaAshaObj.print();
 
+            //=====================*******
+            //we can inherit hybrid inheritance into another child clas also...
+            //inheritance always inherit the members from base to derived class.
+            Sample samObj = new Sample();
+            samObj.Bluetooth();
+            samObj.endcall();
+            samObj.calling();
+            samObj.receiving();
+            samObj.Bluetooth();
+            samObj.print();
+
 
 
 
@@ -57,8 +70,7 @@ namespace OneClass_TwoInterfacesIntoAnotherClass
     }
 }
 /*
- * OUTPUT:
- * CALLING FROM NOKIA1100 MOBILE
+ CALLING FROM NOKIA1100 MOBILE
 call recieved by 1100
 call ended by 1100
 message is sending from nokia1100
@@ -81,4 +93,11 @@ call ended by NokiaAsha
 call  by Wifi
 I am using blueetooth
 print is calling
+I am using blueetooth
+call ended by NokiaAsha
+Calling from NokiaAsha MOBILE
+call recieved by NokiaAsha
+I am using blueetooth
+print is calling
+
 */
